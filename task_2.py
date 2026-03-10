@@ -1,7 +1,7 @@
 points = []
 point = 0
-f1 = open("students.txt", 'r')
-f2 = open("result.txt", 'w')
+f1 = open("resource/students.txt", 'r')
+f2 = open("resource/result.txt", 'w')
 for i in f1:
     temp = i.split()
     stud = temp[0]

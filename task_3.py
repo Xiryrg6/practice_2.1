@@ -1,6 +1,6 @@
 import csv
 
-FILENAME = 'products.csv'
+FILENAME = 'resource/products.csv'
 
 def read_data():
     goods = []

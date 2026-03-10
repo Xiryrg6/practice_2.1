@@ -1,4 +1,4 @@
-LOGFILE = 'calculator.log'
+LOGFILE = 'resource/calculator.log'
 
 def last_operations():
     try:
