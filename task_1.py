@@ -3,19 +3,17 @@ count_str = 0
 count_words = 0
 max_len_words = ""
 
-f = open("text.txt", 'w')
-for i in list_1:
-    f.write(i + "\n")
-f.close()
+with open("text.txt", 'w') as f:
+    for i in list_1:
+        f.write(i + "\n")
 
-f = open("text.txt", 'r')
-for i in f:
-    count_str += 1
-    for j in range(len(i.split())):
-        count_words += 1
-    if len(i) > len(max_len_words):
-        max_len_words = i
-f.close()
+with open("text.txt", 'r') as f:
+    for i in f:
+        count_str += 1
+        for j in range(len(i.split())):
+            count_words += 1
+        if len(i) > len(max_len_words):
+            max_len_words = i
 
 print("Список: " + str(list_1))
 print(f"Количество строк:{count_str}\n"

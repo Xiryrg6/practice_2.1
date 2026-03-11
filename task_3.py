@@ -17,8 +17,7 @@ def read_data():
 
 def save(goods):
     with open(FILENAME, 'w', newline='', encoding='utf-8') as f:
-        fieldnames = ['Название', 'Цена', 'Количество']
-        writer = csv.DictWriter(f, fieldnames=fieldnames)
+        writer = csv.DictWriter(f, fieldnames=['Название', 'Цена', 'Количество'])
         writer.writeheader()
         for product in goods:
             product['Цена'] = str(product['Цена'])

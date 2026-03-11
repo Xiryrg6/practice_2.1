@@ -1,21 +1,19 @@
 points = []
 point = 0
-f1 = open("resource/students.txt", 'r')
-f2 = open("resource/result.txt", 'w')
-for i in f1:
-    temp = i.split()
-    stud = temp[0]
-    for j in range(1, len(temp)):
-        points.append(temp[j])
-    for j in points:
-        point += int(j)
-    gpa = float(point / len(points))
-    if gpa > 4.0:
-        f2.write(stud + ' ' + str(gpa) + "\n")
-    points = []
-    point = 0
-f2.close()
-f1.close()
+with open("resource/students.txt", 'r') as f1:
+    with open("resource/result.txt", 'w') as f2:
+        for i in f1:
+            temp = i.split()
+            stud = temp[0]
+            for j in range(1, len(temp)):
+                points.append(temp[j])
+            for j in points:
+                point += int(j)
+            gpa = float(point / len(points))
+            if gpa > 4.0:
+                f2.write(stud + ' ' + str(gpa) + "\n")
+            points = []
+            point = 0
 
 best_gpa = ["", 0]
 f = open("result.txt", "r")
